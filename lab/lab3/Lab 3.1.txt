@@ -1,0 +1,60 @@
+Draft Pseudo Code
+1.รับ input เก็บไว้เป็นตัวแปร x
+2.สร้างตัวแปร sum 
+3.บวกเลขโดดทุกหลักไปเรื่อยๆจนกว่าจะเป็นเลขหลักเดียว
+4.แสดงผล sum
+
+ขยายบวกเลขโดดทุกหลักไปเรื่อยๆจนกว่าจะเป็นเลขหลักเดียว
+	1.เมื่อ x > 9 ทำซ้ำ
+		1.sum = 0;
+		2.เมื่อ x > 0 ทำซ้ำ
+			2.digit = x % 10
+			3.sum += digit
+			4.x /= 10
+		3.x = sum
+
+Simple Command Pseudo Code
+	1.รับ input เก็บไว้เป็นตัวแปร x
+	2.สร้างตัวแปร sum 
+	3.เมื่อ x > 9 ทำซ้ำ
+		1.sum = 0;
+		2.เมื่อ x > 0 ทำซ้ำ
+			2.digit = x % 10
+			3.sum += digit
+			4.x /= 10
+		3.x = sum
+	4.แสดงผล sum
+
+C program
+#include <stdio.h>
+
+int main() {
+    int x;
+    int sum;
+
+    printf("Enter a number: ");
+    scanf("%d", &x);
+
+    while (x > 9) {
+        sum = 0;
+        
+        while (x > 0) {
+            int digit = x % 10;
+            sum += digit;
+            x /= 10;
+        }
+        
+        x = sum;
+    }
+
+    printf("Result: %d\n", x);
+
+    return 0;
+}
+
+
+
+
+
+
+
